@@ -18,3 +18,6 @@ Incluye:
 1. Abre esta carpeta.
 2. Haz doble clic en `index.html` o ábrelo en tu navegador preferido.
 3. No se requiere instalación adicional.
+
+## Nota
+En el index.html de la practica27 viene un conjunto de todas las practicas realizadas
