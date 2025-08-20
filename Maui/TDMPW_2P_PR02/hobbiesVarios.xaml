@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TDMPW_2P_PR02.hobbiesVarios"
+            Title="hobbiesVarios"
+            BackgroundColor="#424240"
+            >
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+            
+        <Frame CornerRadius="15" HasShadow="True" Padding="10" Margin="10" BorderColor="White" BackgroundColor="Black">
+        <StackLayout Spacing="25">
+            <Label
+                    Text="..."
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontFamily="Happy"
+                    x:Name="hobbieName"
+                    TextColor="White"
+            />
+
+            <BoxView Background="White" HeightRequest="2"/>
+
+            <Label
+                Text="HOBBIES"
+                TextColor="White"
+                FontFamily="Sunflowers"
+                FontSize="35"
+            />
+
+            <HorizontalStackLayout Spacing="20">
+                <Image
+                    Source="pintura.png"
+                    Aspect="AspectFill"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                />
+                <Label
+                    Text="Pintar"
+                    TextColor="White"
+                    FontFamily="Sunflowers"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="20">
+                <Image
+                    Source="tejer.png"
+                    Aspect="AspectFill"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                />
+                <Label
+                    Text="Tejer"
+                    TextColor="White"
+                    FontFamily="Sunflowers"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="20">
+                <Image
+                    Source="tele.png"
+                    Aspect="AspectFill"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                />
+                <Label
+                    Text="Ver la tele"
+                    TextColor="White"
+                    FontFamily="Sunflowers"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                />
+            </HorizontalStackLayout>
+            
+            <Label
+                Text="NIVEL"
+                TextColor="White"
+                FontFamily="Sunflowers"
+                FontSize="35"
+            />
+
+            <HorizontalStackLayout Spacing="30">
+                <Slider
+                    Minimum = "1"
+                    Maximum = "10"
+                    Value = "1"
+                    WidthRequest = "400"
+                    x:Name ="barra1"
+                    ThumbColor = "#32b83d"
+                    MinimumTrackColor = "#abe2f5"
+                    MaximumTrackColor = "#e2b7f7"
+                    ValueChanged = "OnSldChange"
+                    BackgroundColor = "#abf5b1"
+                />
+                <Label
+                    Text="..."
+                    x:Name="txtSid"
+                    TextColor = "White"
+                    VerticalOptions = "Center"
+                />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="30">
+                <Slider
+                    Minimum = "1"
+                    Maximum = "10"
+                    Value = "1"
+                    WidthRequest = "400"
+                    x:Name ="barra2"
+                    ThumbColor = "#32b83d"
+                    MinimumTrackColor = "#abe2f5"
+                    MaximumTrackColor = "#e2b7f7"
+                    ValueChanged = "OnSldChange"
+                    BackgroundColor = "#abf5b1"
+                />
+                <Label
+                    Text="..."
+                    x:Name="txtSid2"
+                    TextColor = "White"
+                    VerticalOptions = "Center"
+                />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="30">
+                <Slider
+                    Minimum = "1"
+                    Maximum = "10"
+                    Value = "1"
+                    WidthRequest = "400"
+                    x:Name ="barra3"
+                    ThumbColor = "#32b83d"
+                    MinimumTrackColor = "#abe2f5"
+                    MaximumTrackColor = "#e2b7f7"
+                    ValueChanged = "OnSldChange"
+                    BackgroundColor = "#abf5b1"
+                />
+                <Label
+                    Text="..."
+                    x:Name="txtSid3"
+                    TextColor = "White"
+                    VerticalOptions = "Center"
+                />
+            </HorizontalStackLayout>
+        </StackLayout>
+        </Frame>
+
+        <HorizontalStackLayout Spacing="20">
+            <Label
+                Text="Ingrese su nombre:"
+                TextColor="White"
+                FontFamily="Sunflowers"
+                FontSize="30"
+                HorizontalOptions="Center"
+            />
+            <Entry
+                Placeholder="Nombre"
+                x:Name="txtNombre"
+                WidthRequest="300"
+                FontSize="20"
+                TextColor="Black"
+                BackgroundColor="#8a8a8a"
+                Completed="OnEntryCompleted"
+            />
+        </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

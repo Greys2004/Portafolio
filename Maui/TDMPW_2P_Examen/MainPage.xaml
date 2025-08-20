@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TDMPW_2P_Examen.MainPage">
+
+    <ScrollView>
+        <Grid  RowSpacing="0" ColumnSpacing="0" Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/> 
+                <RowDefinition Height="*"/> 
+                <RowDefinition Height="*"/> 
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions> 
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Frame
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                CornerRadius="20"
+                Padding="0"
+                HasShadow="False"
+                Margin="5,5,5,5"
+                >
+                <Image
+                    Source="https://queretaro.quadratin.com.mx/www/wp-content/uploads/2021/11/spiderman-way-home-fecha-estreno.jpg"
+                    Aspect="AspectFill" 
+                    HeightRequest="250"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"/>
+            </Frame>
+
+            <Button
+                Text="Todos los cines ⭣"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Grid.Row="1" 
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="5,0,5,5"
+                CornerRadius="20"
+                BorderWidth="2"
+                BackgroundColor="Black"
+                TextColor="White"
+                FontFamily="Happy"
+                FontSize="20"
+            />
+
+
+            <Frame
+                Grid.Row="2" 
+                Grid.Column="0"
+                Grid.RowSpan="2"
+                CornerRadius="20"
+                Padding="0"
+                HasShadow="False"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Margin="5,0,5,5"
+                >
+                <Image
+                    Source="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/09/poster-batman-2021-2064381.jpg?tf=3840x"
+                    Aspect="AspectFill"
+                />
+            </Frame>
+
+            <Frame
+                Grid.Row="2" 
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                CornerRadius="20"
+                Padding="0"
+                HasShadow="False"
+                Margin="0,0,5,5"
+                >
+                <Image
+                    Source="https://www.justwatch.com/images/backdrop/317446267/s1440/guide.png"
+                    Aspect="AspectFill" 
+                    HeightRequest="150"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"/>
+            </Frame>
+
+            <Frame
+                Grid.Row="3" 
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                CornerRadius="20"
+                Padding="0"
+                HasShadow="False"
+                HeightRequest="150"
+                Margin="0,0,5,5"
+                >
+                <Image
+                    Source="https://cflvdg.avoz.es/default/2015/10/25/00121445794356152657597/Foto/ironMAN.jpg"
+                    Aspect="AspectFill" 
+                    HeightRequest="150"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"/>
+            </Frame>
+
+            <Frame
+                Grid.Row="4" 
+                Grid.Column="0"
+                Grid.RowSpan="2"
+                CornerRadius="20"
+                Padding="0"
+                HasShadow="False"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Margin="5,0,5,5"
+                >
+                <Image
+                    Source="https://es.web.img2.acsta.net/c_310_420/pictures/14/01/31/16/12/220933.jpg"
+                    Aspect="AspectFill" 
+                    />
+            </Frame>
+            <Frame
+                Grid.Row="4" 
+                Grid.Column="1"
+                Grid.RowSpan="2"
+                CornerRadius="20"
+                Padding="0"
+                HasShadow="False"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Margin="0,0,5,5"
+                >
+                <Image
+                    Source="https://es.web.img3.acsta.net/medias/nmedia/18/66/73/18/20350674.jpg"
+                    Aspect="AspectFill" 
+                    />
+            </Frame>
+            <Frame
+                Grid.Row="4" 
+                Grid.Column="2"
+                Grid.RowSpan="2"
+                CornerRadius="20"
+                Padding="0"
+                HasShadow="False"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Margin="0,0,5,5"
+                >
+                <Image
+                    Source="https://m.media-amazon.com/images/M/MV5BM2ZmNjQ2MzAtNDlhNi00MmQyLWJhZDMtNmJiMjFlOWY4MzcxXkEyXkFqcGc@._V1_.jpg"
+                    Aspect="AspectFill" 
+                    />
+            </Frame>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

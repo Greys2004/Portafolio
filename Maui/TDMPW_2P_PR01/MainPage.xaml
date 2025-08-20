@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TDMPW_2P_PR01.MainPage"
+            BackgroundColor="#7e8ca8">
+
+    <ScrollView>
+        <VerticalStackLayout Padding = "20" VerticalOptions ="CenterAndExpand" Spacing="25">
+            <Frame CornerRadius="15" HasShadow="True" Padding="10" Margin="10" BorderColor="#414c63" BackgroundColor="#edf1fa">
+                <StackLayout Spacing="10">
+
+                    <Image
+                        Source="principal.jpg"
+                        WidthRequest="120"
+                        HeightRequest="120"
+                        Aspect="AspectFill"
+                    >
+                        <Image.Clip>
+                            <EllipseGeometry
+                                Center="60,60"
+                                RadiusX="60"
+                                RadiusY="60"/>
+                        </Image.Clip>
+                    </Image>
+
+                    <Label
+                        Text="Spiderman: No way home"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                    />
+
+                    <BoxView Color="#414c63" HeightRequest="2"/>
+
+                    <Label
+                        Text="En Spider-Man: No Way Home, la identidad de Peter Parker es revelada al mundo, lo que pone en peligro a sus seres queridos. Desesperado, Peter busca la ayuda del Doctor Strange para que todos olviden que él es Spider-Man. Sin embargo, el hechizo sale mal y abre el multiverso, trayendo a villanos de otras realidades. Ahora, Peter debe enfrentarse a estos enemigos con la ayuda de dos versiones alternativas de Spider-Man, mientras lucha por restaurar el equilibrio y hacer un sacrificio final para proteger a quienes ama."
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                    />
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

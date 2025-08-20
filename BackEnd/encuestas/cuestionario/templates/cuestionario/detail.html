@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'detail.css' %}">
+</head>
+<body>
+    <form action = "{% url 'cuestionario:vote' pregunta.id %}" method = "post">
+        {% csrf_token %}
+        <fieldset>
+            <legend>
+                <h1> {{ pregunta.texto_pregunta }} </h1>
+            </legend>
+
+            {% if error_message %}
+                <p><strong> {{ error_message }} </strong></p>
+            {% endif %}
+            
+            {% for respuesta in pregunta.respuesta_set.all %}
+                <input type="radio" name="respuesta" id = "respuesta{{ forloop.counter }}" value="{{ respuesta.id }}">
+                <label for = "respuesta{{ forloop.counter }}"> {{ respuesta.texto_respuesta }} </label>
+                <br>
+            {% endfor %}
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <a href= "{% url 'cuestionario:index' %}"> Ver todas las preguntas </a>
+    </form>
+</body>
+</html>

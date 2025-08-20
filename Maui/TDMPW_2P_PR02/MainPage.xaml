@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TDMPW_2P_PR02.MainPage"
+            BackgroundColor="#424240"
+            >
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="10"
+            Spacing="5"
+            VerticalOptions = "Start">
+
+        <Frame CornerRadius="15" HasShadow="True" Padding="10" Margin="10" BorderColor="White" BackgroundColor="Black">
+        <StackLayout Spacing="25">
+            <Image
+                Source="menu.jpg"
+                WidthRequest="120"
+                HeightRequest="120"
+                Aspect="AspectFill"
+                Margin="0,50,0,0"
+            >
+                <Image.Clip>
+                    <EllipseGeometry
+                        Center="60,60"
+                        RadiusX="60"
+                        RadiusY="60"/>
+                </Image.Clip>
+            </Image>
+
+            <BoxView Background="White" HeightRequest="2"/>
+
+            <Label
+                Text="Hobbies"
+                FontSize="Large"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontFamily="Happy"
+                TextColor="White"
+            />
+            </StackLayout>
+            </Frame>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

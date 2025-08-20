@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TDMPW_2P_PR02.hobbie"
+            Title="hobbie"
+            BackgroundColor="#424240"
+            >
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Frame CornerRadius="15" HasShadow="True" Padding="10" Margin="10" BorderColor="White" BackgroundColor="Black">
+                <StackLayout Spacing="25">
+
+                    <HorizontalStackLayout HorizontalOptions="FillAndExpand" Spacing="40">
+                        <Label
+                            Text="Hobbie Name"
+                            FontSize="Large"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            FontFamily="Happy"
+                            x:Name="hobbieName"
+                            TextColor="White"
+                        />
+                        <Switch 
+                            x:Name="miSwitch"
+                            Toggled="OnSwitchToggled"
+                            IsToggled="False" 
+                            HorizontalOptions="End"
+                            ThumbColor="#84c5cf"
+                            OnColor="#84c5cf"
+                            BackgroundColor="#a7a9ab"
+                        />
+                    </HorizontalStackLayout>
+
+                    <BoxView Background="White" HeightRequest="2"/>
+
+                    <Label 
+                        Text="Usa el Slider" 
+                        x:Name="usarSliderLabel" 
+                        TextColor="#67c781" 
+                        IsVisible="True"
+                        FontFamily="Sunflowers"
+                        FontSize="35"
+                    />
+                    <Slider 
+                        x:Name="miSlider" 
+                        Minimum="0" 
+                        Maximum="10" 
+                        ValueChanged="OnSliderValueChanged"
+                        ThumbColor="#32b83d"
+                        MinimumTrackColor="#9cf0b2"
+                        MaximumTrackColor="#dced9d"
+                        BackgroundColor="#ed9de6"
+                        IsEnabled="False"
+                    />
+
+                    <!-- Stepper -->
+                    <Label 
+                        Text="Usa el Stepper" 
+                        x:Name="usarStepperLabel" 
+                        TextColor="#f0afea" 
+                        IsVisible="False"
+                        FontFamily="Sunflowers"
+                        FontSize="35"
+                    />
+                    <Stepper 
+                        x:Name="miStepper" 
+                        Minimum="0" 
+                        Maximum="10" 
+                        ValueChanged="OnStepperValueChanged" 
+                        BackgroundColor="#f0afea"
+                        IsVisible="False"
+                    />
+
+                    <Label x:Name="valorActualLabel" Text="Valor Actual: 0" TextColor="White" FontSize="30" FontFamily="Sunflowers" />
+
+                    <HorizontalStackLayout Spacing="20">
+                        <Label
+                            Text="Ingrese su nombre:"
+                            TextColor="White"
+                            FontFamily="Sunflowers"
+                            FontSize="30"
+                            HorizontalOptions="Center"
+                        />
+                        <Entry
+                            Placeholder="Nombre"
+                            x:Name="txtNombre"
+                            WidthRequest="300"
+                            FontSize="20"
+                            TextColor="Black"
+                            BackgroundColor="#8a8a8a"
+                            Completed="OnEntryCompleted"
+                        />
+                    </HorizontalStackLayout>
+
+                </StackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

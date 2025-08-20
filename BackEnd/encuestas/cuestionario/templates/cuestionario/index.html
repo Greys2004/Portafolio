@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    {% if lista_preguntas %}
+        <ul>
+            {% for pregunta in lista_preguntas%}
+                <li>
+                    <a href="{% url 'cuestionario:detail' pregunta.id %}">{{ pregunta.texto_pregunta }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay preguntas disponibles.</p>
+    {% endif %}
+
+        <form action="{% url 'logout' %}" method="post" >
+            {% csrf_token %}
+            <button type="submit" style="border: none; background:none; padding:0; color:rgb(178, 51, 224); text-decoration:underline; cursor:pointer;">
+                Cerrar sesion
+            </button>
+        </form>
+</body>
+</html>

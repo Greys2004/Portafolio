@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TDMPW_2P_PR01.Personaje1"
+            Title="Personaje1"
+            BackgroundColor="#b1c8de">
+    <ScrollView>
+        <VerticalStackLayout Padding = "20" VerticalOptions = "CenterAndExpand">
+
+
+            <Frame CornerRadius="15" BorderColor="LightGray" HasShadow="True" Padding="10" Margin="10">
+                <StackLayout Spacing="10">
+
+                    <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                        <Image
+                            Source="tom.jpg"
+                            WidthRequest="120"
+                            HeightRequest="120"
+                            Aspect="AspectFill"
+                        >
+                            <Image.Clip>
+                                <EllipseGeometry
+                                    Center="60,60"
+                                    RadiusX="60"
+                                    RadiusY="60"/>
+                            </Image.Clip>
+                        </Image>
+                        
+                        <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+                        <Label
+                            Text="Tom Holland --- Peter Parker"
+                            FontSize="Large"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                        />
+                        <BoxView Color="LightGray" HeightRequest="2"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+
+                    <Label
+                        Text="Joven estudiante de Nueva York, Peter es mordido por una araña radiactiva, adquiriendo habilidades sobrehumanas como fuerza, agilidad y la capacidad de trepar muros. Tras la muerte de su Tío Ben, decide utilizar sus poderes para luchar contra el crimen como Spider-Man, abrazando la lección con gran poder viene gran responsabilidad A lo largo de sus aventuras, enfrenta a villanos icónicos y navega los desafíos de su vida personal, convirtiéndose en uno de los superhéroes más queridos y reconocibles del mundo."
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                    />
+                </StackLayout>
+            </Frame>
+
+
+        <HorizontalStackLayout Padding="10" VerticalOptions="Center" Spacing="20">
+            <ImageButton
+                Source="like.png"
+                WidthRequest="50"
+                HeightRequest="50"
+                Aspect="AspectFit"
+                BackgroundColor="Transparent"
+                Clicked="OnLikeButtonClicked" />
+            
+            <ImageButton
+                Source="dislike.png"
+                WidthRequest="50"
+                HeightRequest="50"
+                Aspect="AspectFit"
+                BackgroundColor="Transparent"
+                Clicked="OnDislikeButtonClicked" />
+
+            <Label
+                    Text="..."
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    x:Name="txtResultado"
+            />
+        </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

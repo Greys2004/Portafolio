@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:vm="clr-namespace:TDMPW_3P_PR01.ViewModels"
+            x:Class="TDMPW_3P_PR01.Views.MoviesPage"
+            Title="MoviesPage"
+            Background="Black">
+    
+    <ContentPage.BindingContext>
+        <vm:MoviesViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView Padding="15">
+    <StackLayout Padding="20">
+        <!-- BindingContext= de qué caja deben tomar la información. -->
+        <!-- Binding ="esto es lo que quiero que el control muestre o haga con esos datos". -->
+        <Label 
+            Text="Agregar una nueva pelicula"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="24"
+            FontAttributes="Bold"
+            TextColor="White"
+            BackgroundColor="#106b68"
+            Padding="12"
+            HorizontalTextAlignment="Center"
+        />
+
+        <Entry Placeholder="Título" Text="{Binding NewTitle}" TextColor="White"/>
+        <Entry Placeholder="Director" Text="{Binding NewDirector}" TextColor="White"/>
+        <DatePicker Date="{Binding NewReleaseDate}" TextColor="White"/>
+        <Entry Placeholder="Género" Text="{Binding NewGenre}" TextColor="White"/>
+
+        <Button 
+            Text="Agregar Película" 
+            Command="{Binding AddMovieCommand}" 
+            BackgroundColor="#106b68"
+            TextColor="White"
+            Padding="12"
+            CornerRadius="8"
+            FontSize="16" 
+            HorizontalOptions="FillAndExpand"
+            HeightRequest="50"
+        />
+
+        <Label
+            Text="LISTA DE PELICULAS"
+            FontSize="Medium"
+            HorizontalOptions="Center"
+            Margin="0,20,0,0"
+        />
+
+    <CollectionView ItemsSource="{Binding Movies}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Padding="10" BorderColor="Black" CornerRadius="10" BackgroundColor="#7fbab8">
+                    <StackLayout>
+                        <Label Text="{Binding Title}" FontSize="30" FontAttributes="Bold" TextColor="#0e7572" HorizontalOptions="Center"/>
+                        <Label Text="{Binding Director}" FontSize="25" HorizontalOptions="Center"/>
+                        <Label Text="{Binding ReleaseDate, StringFormat='{0:dd/MM/yyyy}'}" FontSize="20" HorizontalOptions="Center"/>
+                        <Label Text="{Binding Genre, FallbackValue='Género no especificado'}" FontSize="15" TextColor="#616b6b" HorizontalOptions="Center"/>
+                        
+                        <!--CommandParameter: Le pasa la película específica\al comando, para que se sepa cuál eliminar. -->
+                        <!--BindingContext= de qué caja deben tomar la información. -->
+                        <!--Source=.... = necesita acceder a un comando que está en el contexto superior (el ViewModel de la página) no en el de DataTemplate -->
+                        <Button 
+                            Text="Eliminar"
+                            Command="{Binding BindingContext.DeleteMovieCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                            CommandParameter="{Binding .}"
+                            BackgroundColor="#109e99"
+                        />
+                    </StackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

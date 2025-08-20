@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TDMPW_2P_PR01.Personaje2"
+            Title="Personaje2"
+            BackgroundColor="#d19890">
+<ScrollView>
+        <VerticalStackLayout Padding = "20" VerticalOptions = "CenterAndExpand">
+
+            <Frame CornerRadius="15" BorderColor="LightGray" HasShadow="True" Padding="10" Margin="10">
+                <StackLayout Spacing="10">
+
+                    <HorizontalStackLayout Spacing="30" VerticalOptions="Center">
+                        <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+                        <Label
+                            Text="Zendaya  --- MJ"
+                            FontSize="Large"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                        />
+                        <BoxView Color="LightGray" HeightRequest="2"/>
+                        </VerticalStackLayout>
+
+                        <Image
+                            Source="zendaya.jpg"
+                            WidthRequest="120"
+                            HeightRequest="120"
+                            Aspect="AspectFill"
+                        >
+                            <Image.Clip>
+                                <EllipseGeometry
+                                    Center="60,60"
+                                    RadiusX="60"
+                                    RadiusY="60"/>
+                            </Image.Clip>
+                        </Image>
+                        
+                    </HorizontalStackLayout>
+
+                    <Label
+                        Text="Mary Jane Watson (MJ) es un personaje de Marvel Comics, creado por Stan Lee y John Romita Sr., que debutó en The Amazing Spider-Man #25 en 1965. Conocida por ser el interés amoroso de Peter Parker, MJ es una actriz y modelo con una personalidad carismática. A lo largo de las historias, muestra una profunda lealtad hacia Peter, enfrentando sus propios desafíos mientras apoya su vida como Spider-Man. Su relación se ha convertido en uno de los romances más emblemáticos del universo Marvel."
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                    />
+                </StackLayout>
+            </Frame>
+
+
+        <HorizontalStackLayout Padding="10" VerticalOptions="Center" Spacing="20">
+            <ImageButton
+                Source="like.png"
+                WidthRequest="50"
+                HeightRequest="50"
+                Aspect="AspectFit"
+                BackgroundColor="Transparent"
+                Clicked="OnLikeButtonClicked" />
+            
+            <ImageButton
+                Source="dislike.png"
+                WidthRequest="50"
+                HeightRequest="50"
+                Aspect="AspectFit"
+                BackgroundColor="Transparent"
+                Clicked="OnDislikeButtonClicked" />
+
+            <Label
+                    Text="..."
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    x:Name="txtResultado"
+            />
+        </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\4to semestre\\Taller de desarrollo\\2do parcial\\TDMPW\\TDMPW_2P_Examen\\TDMPW_2P_Examen.csproj": {}
+  },
+  "projects": {
+    "E:\\4to semestre\\Taller de desarrollo\\2do parcial\\TDMPW\\TDMPW_2P_Examen\\TDMPW_2P_Examen.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\4to semestre\\Taller de desarrollo\\2do parcial\\TDMPW\\TDMPW_2P_Examen\\TDMPW_2P_Examen.csproj",
+        "projectName": "TDMPW_2P_Examen",
+        "projectPath": "E:\\4to semestre\\Taller de desarrollo\\2do parcial\\TDMPW\\TDMPW_2P_Examen\\TDMPW_2P_Examen.csproj",
+        "packagesPath": "C:\\Users\\greys\\.nuget\\packages\\",
+        "outputPath": "E:\\4to semestre\\Taller de desarrollo\\2do parcial\\TDMPW\\TDMPW_2P_Examen\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "C:\\Users\\greys\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows10.0.19041.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows10.0.19041": {
+            "targetAlias": "net8.0-windows10.0.19041.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows10.0.19041": {
+          "targetAlias": "net8.0-windows10.0.19041.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Maui.Controls": {
+              "target": "Package",
+              "version": "[8.0.72, )"
+            },
+            "Microsoft.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[8.0.72, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Windows.SDK.NET.Ref",
+              "version": "[10.0.19041.44, 10.0.19041.44]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Windows.SDK.NET.Ref": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win10-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

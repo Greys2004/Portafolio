@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TDMPW_2P_Examen.pagina2"
+            Title="pagina2">
+
+    <ScrollView>
+    <VerticalStackLayout>
+
+    <HorizontalStackLayout>
+        <Grid>
+            <Frame CornerRadius="10" Padding="10" Margin="10" HasShadow="True" WidthRequest="120" HeightRequest="120" HorizontalOptions="Start" VerticalOptions="Start">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                    <Image 
+                        Source="combo1.png" 
+                        HeightRequest="30" 
+                        WidthRequest="30" 
+                    />
+                    <Button 
+                        Text="Combos" 
+                        Margin="0,10,0,0"
+                        WidthRequest="100" 
+                        BackgroundColor="#e6e8e6"
+                        TextColor="Black"
+                        FontFamily="Happy"
+                        Clicked="OnCombosButtonClicked"
+                    />
+                </StackLayout>
+            </Frame>
+        </Grid>
+        <Grid>
+            <Frame CornerRadius="10" Padding="10" Margin="10" HasShadow="True" WidthRequest="120" HeightRequest="120" HorizontalOptions="Start" VerticalOptions="Start">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                    <Image 
+                        Source="combo2.png" 
+                        HeightRequest="30" 
+                        WidthRequest="30" 
+                    />
+                    <Button 
+                        Text="MaxiCombo" 
+                        Margin="0,10,0,0"
+                        WidthRequest="100" 
+                        BackgroundColor="#e6e8e6"
+                        TextColor="Black"
+                        FontFamily="Happy"
+                        Clicked="OnMaxiCombosButtonClicked"
+                    />
+                </StackLayout>
+            </Frame>
+        </Grid>
+        <Grid>
+            <Frame CornerRadius="10" Padding="10" Margin="10" HasShadow="True" WidthRequest="120" HeightRequest="120" HorizontalOptions="Start" VerticalOptions="Start">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                    <Image 
+                        Source="combo3.png" 
+                        HeightRequest="30" 
+                        WidthRequest="30" 
+                    />
+                    <Button 
+                        Text="Todos" 
+                        Margin="0,10,0,0"
+                        WidthRequest="100" 
+                        BackgroundColor="#e6e8e6"
+                        TextColor="Black"
+                        FontFamily="Happy"
+                        Clicked="OnTodosButtonClicked"
+                    />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </HorizontalStackLayout>
+
+    <Label 
+        Text="COMBOS"
+        FontSize="30"
+        TextColor="#26226e"
+        VerticalOptions="Center" 
+        FontFamily="Happy"
+        Margin="15,20,0,0"
+        IsVisible="{Binding ShowCombosLabel}"
+    />
+
+    <HorizontalStackLayout>
+        <Frame CornerRadius="10" Padding="10" Margin="10" HasShadow="True" WidthRequest="170" HeightRequest="250" HorizontalOptions="Start" VerticalOptions="Start" IsVisible="{Binding ShowCombos}">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <VerticalStackLayout>
+                    <Image 
+                        Source="https://images.sabroson.com.mx/insecure/fit/300/300/ce/0/plain/https://sabroson-assests.s3.us-west-2.amazonaws.com/af268c/prods/jVDhiYFU6CKrAg9aL3CNH10J17hZc49wtZl6JGBv.webp@webp" 
+                        HeightRequest="140" 
+                        WidthRequest="140" 
+                    />
+                    <Label 
+                        Text="Combo Icee"
+                        FontSize="20"
+                        TextColor="#6760a6"
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                        Margin="0,10,0,0"
+                    />
+                    <Label 
+                        Text="$190"
+                        FontSize="15"
+                        TextColor="#6760a6"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                    />
+                </VerticalStackLayout>
+                </StackLayout>
+        </Frame>
+        <Frame CornerRadius="10" Padding="10" Margin="10" HasShadow="True" WidthRequest="170" HeightRequest="250" HorizontalOptions="Start" VerticalOptions="Start" IsVisible="{Binding ShowCombos}">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <VerticalStackLayout>
+                    <Image 
+                        Source="https://s3.eu-west-1.amazonaws.com/cdn.spydeals.nl/images/uploads/zTF8Vn8u85mntQAXOoOs94zzOMZkY9D1w65lZOOc.png" 
+                        HeightRequest="140" 
+                        WidthRequest="140" 
+                    />
+                    <Label 
+                        Text="Combo Nachos"
+                        FontSize="20"
+                        TextColor="#6760a6"
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                        Margin="0,10,0,0"
+                    />
+                    <Label 
+                        Text="$150"
+                        FontSize="15"
+                        TextColor="#6760a6"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                    />
+                </VerticalStackLayout>
+                </StackLayout>
+        </Frame>
+        <Frame CornerRadius="10" Padding="10" Margin="10" HasShadow="True" WidthRequest="170" HeightRequest="250" HorizontalOptions="Start" VerticalOptions="Start"  IsVisible="{Binding ShowCombos}">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <VerticalStackLayout>
+                    <Image 
+                        Source="https://tb-static.uber.com/prod/image-proc/processed_images/c875ed417a80b3b83b7a075a2ba40f88/7f4ae9ca0446cbc23e71d8d395a98428.jpeg" 
+                        HeightRequest="140" 
+                        WidthRequest="140" 
+                    />
+                    <Label 
+                        Text="Combo Jochos"
+                        FontSize="20"
+                        TextColor="#6760a6"
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                        Margin="0,10,0,0"
+                    />
+                    <Label 
+                        Text="$190"
+                        FontSize="15"
+                        TextColor="#6760a6"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                    />
+                </VerticalStackLayout>
+                </StackLayout>
+        </Frame>
+    </HorizontalStackLayout>
+
+    <Label 
+        Text="MAXI-COMBOS"
+        FontSize="30"
+        TextColor="#26226e"
+        VerticalOptions="Center" 
+        FontFamily="Happy"
+        Margin="15,10,0,0"
+        IsVisible="{Binding ShowMaxiCombosLabel}"
+    />
+
+    <HorizontalStackLayout>
+        <Frame CornerRadius="10" Padding="10" Margin="10" HasShadow="True" WidthRequest="170" HeightRequest="250" HorizontalOptions="Start" VerticalOptions="Start" IsVisible="{Binding ShowMaxiCombos}">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <VerticalStackLayout>
+                    <Image 
+                        Source="https://tb-static.uber.com/prod/image-proc/processed_images/04e493ac063f3ddc4d2232267c8a2410/5954bcb006b10dbfd0bc160f6370faf3.jpeg" 
+                        HeightRequest="140" 
+                        WidthRequest="140" 
+                    />
+                    <Label 
+                        Text="Mix"
+                        FontSize="20"
+                        TextColor="#6760a6"
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                        Margin="0,10,0,0"
+                    />
+                    <Label 
+                        Text="$210"
+                        FontSize="15"
+                        TextColor="#6760a6"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                    />
+                </VerticalStackLayout>
+                </StackLayout>
+        </Frame>
+        <Frame CornerRadius="10" Padding="10" Margin="10" HasShadow="True" WidthRequest="170" HeightRequest="250" HorizontalOptions="Start" VerticalOptions="Start" IsVisible="{Binding ShowMaxiCombos}">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <VerticalStackLayout>
+                    <Image 
+                        Source="https://tb-static.uber.com/prod/image-proc/processed_images/99d94af3a2cc3e7584a470d8186626d9/5954bcb006b10dbfd0bc160f6370faf3.jpeg" 
+                        HeightRequest="140" 
+                        WidthRequest="140" 
+                    />
+                    <Label 
+                        Text="Combo Family"
+                        FontSize="20"
+                        TextColor="#6760a6"
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                    />
+                    <Label 
+                        Text="$290"
+                        FontSize="15"
+                        TextColor="#6760a6"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                    />
+                </VerticalStackLayout>
+                </StackLayout>
+        </Frame>
+        <Frame CornerRadius="10" Padding="10" Margin="10" HasShadow="True" WidthRequest="170" HeightRequest="250" HorizontalOptions="Start" VerticalOptions="Start" IsVisible="{Binding ShowMaxiCombos}">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <VerticalStackLayout>
+                    <Image 
+                        Source="https://tb-static.uber.com/prod/image-proc/processed_images/0da264f419ed9be79bfe6a441ffc4090/5954bcb006b10dbfd0bc160f6370faf3.jpeg" 
+                        HeightRequest="140" 
+                        WidthRequest="140" 
+                    />
+                    <Label 
+                        Text="Combo M-M"
+                        FontSize="20"
+                        TextColor="#6760a6"
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                    />
+                    <Label 
+                        Text="$190"
+                        FontSize="15"
+                        TextColor="#6760a6"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                    />
+                </VerticalStackLayout>
+                </StackLayout>
+        </Frame>
+    </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

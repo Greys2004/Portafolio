@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de la pregunta</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'results.css' %}">
+</head>
+<body>
+    <h1>{{ pregunta.texto_pregunta }}</h1>
+
+    <ul>
+        {% for respuesta in pregunta.respuesta_set.all %}
+            <li> {{ respuesta.texto_respuesta }} -- {{ respuesta.votos }} voto{{ respuesta.votos|pluralize }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'cuestionario:detail' pregunta.id %}">Votar de nuevo</a>
+    <a href= "{% url 'cuestionario:index' %}"> Ver todas las preguntas </a>
+</body>
+</html>

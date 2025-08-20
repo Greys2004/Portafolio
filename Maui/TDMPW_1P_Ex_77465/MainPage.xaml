@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TDMPW_1P_Examen.MainPage">
+
+    <ContentPage Title="Inicio" IconImageSource="casa.png" BackgroundColor="#84d6b8">
+        <ScrollView>
+            <VerticalStackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Label 
+                    Text="CONVERTIDOR DE POTENCIAS"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    FontFamily = "Panton"
+                />
+                <Image
+                Source="bienvenida3.jpg"
+                Aspect="AspectFill"
+                WidthRequest="150"
+                HeightRequest="150" 
+                >
+                <Image.Clip >
+                    <EllipseGeometry Center="75,75" RadiusX="75" RadiusY="75"/>
+                </Image.Clip>
+                </Image>
+                <Image
+                Source="bienvenida2.jpg"
+                Aspect="AspectFill"
+                WidthRequest="150"
+                HeightRequest="150" 
+                >
+                <Image.Clip >
+                    <EllipseGeometry Center="75,75" RadiusX="75" RadiusY="75"/>
+                </Image.Clip>
+                </Image>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage Title="Watts" IconImageSource="internet.png">
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" /> 
+                    <RowDefinition Height="Auto" /> 
+                    <RowDefinition Height="Auto" /> 
+                    <RowDefinition Height="Auto" /> 
+                    <RowDefinition Height="*" /> 
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions> 
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+            <BoxView Color="#5cb6c3" Grid.Row="0" Grid.ColumnSpan="3"/>
+            <Label 
+                Text="POTENCIA A WATTS CON AMPERIOS Y VOLTIOS"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Grid.Row="0" 
+                Grid.ColumnSpan="3"
+            />
+            <BoxView Color="#82bfc8" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+            <Image
+                Source="floresverdes.png"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                WidthRequest="200"
+                Grid.Row="1" 
+                Grid.Column="0"
+            />
+            <VerticalStackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Spacing="50" Padding="40">
+            <Label
+                Text="Ingrese los amperios"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="Large"
+            />
+            <Entry
+                x:Name="potenciaAmperios" 
+                Keyboard="Numeric" 
+                Placeholder="Amperios" 
+                HorizontalOptions="FillAndExpand" 
+                BackgroundColor="#f0d0e4"
+                VerticalOptions="Center"
+                FontSize="Large"
+                Margin="20,0,20,0"
+            />
+            </VerticalStackLayout>
+            <!-- 2DO -->
+            <BoxView Color="#94c7cf" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
+                <Image
+                Source="florrosa.png"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                WidthRequest="200"
+                Grid.Row="2" 
+                Grid.Column="0"
+            />
+            <VerticalStackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Spacing="50" Padding="40">
+            <Label
+                Text="Ingrese los voltios"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="Large"
+            />
+            <Entry
+                x:Name="potenciaVoltios" 
+                Keyboard="Numeric" 
+                Placeholder="Amperios" 
+                HorizontalOptions="FillAndExpand" 
+                BackgroundColor="#f0d0e4"
+                VerticalOptions="Center"
+                FontSize="Large"
+                Margin="20,0,20,0"
+            />
+            </VerticalStackLayout>
+            <Button
+                Text="Calcular"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                BackgroundColor="#b9e2e9"
+                Grid.Row="3" 
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Clicked="calcularwatts"
+            />
+            <BoxView Color="#d5f1f5" Grid.ColumnSpan="3" Grid.Row="4" Grid.Column="0"/>
+            <Label
+                Text="..."
+                FontSize="Large"
+                Grid.Row="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                x:Name="txtResultadoWatts"
+                Margin="0,30,0,0"
+            />
+            </Grid>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage Title="Watts2" IconImageSource="libro.png">
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" /> 
+                    <RowDefinition Height="Auto" /> 
+                    <RowDefinition Height="Auto" /> 
+                    <RowDefinition Height="Auto" /> 
+                    <RowDefinition Height="*" /> 
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions> 
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+            <BoxView Color="#50be7e" Grid.Row="0" Grid.ColumnSpan="3"/>
+            <Label 
+                Text="POTENCIA A WATTS CON JOULES Y TIEMPO"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Grid.Row="0" 
+                Grid.ColumnSpan="3"
+            />
+            <BoxView Color="#83c19c" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+            <Image
+                Source="floramarilla.png"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                WidthRequest="200"
+                Grid.Row="1" 
+                Grid.Column="0"
+            />
+            <VerticalStackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Spacing="50" Padding="40">
+            <Label
+                Text="Ingrese los Joules"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="Large"
+            />
+            <Entry
+                x:Name="potenciaJoules" 
+                Keyboard="Numeric" 
+                Placeholder="Joules" 
+                HorizontalOptions="FillAndExpand" 
+                BackgroundColor="#f0d0e4"
+                VerticalOptions="Center"
+                FontSize="Large"
+                Margin="20,0,20,0"
+            />
+            </VerticalStackLayout>
+            <!-- 2DO -->
+            <BoxView Color="#9ad3b1" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
+                <Image
+                Source="floresrosas.png"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                WidthRequest="200"
+                Grid.Row="2" 
+                Grid.Column="0"
+            />
+            <VerticalStackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Spacing="50" Padding="40">
+            <Label
+                Text="Ingrese el tiempo"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="Large"
+            />
+            <Entry
+                x:Name="potenciaTiempo" 
+                Keyboard="Numeric" 
+                Placeholder="Tiempo" 
+                HorizontalOptions="FillAndExpand" 
+                BackgroundColor="#f0d0e4"
+                VerticalOptions="Center"
+                FontSize="Large"
+                Margin="20,0,20,0"
+            />
+            </VerticalStackLayout>
+            <Button
+                Text="Calcular"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                BackgroundColor="#b4e5c8"
+                Grid.Row="3" 
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Clicked="calcularPotencia"
+            />
+            <BoxView Color="#cfecdb" Grid.ColumnSpan="3" Grid.Row="4" Grid.Column="0"/>
+            <Label
+                Text="..."
+                FontSize="Large"
+                Grid.Row="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                x:Name="txtResultadoPotencia"
+                Margin="0,30,0,0"
+            />
+            </Grid>
+        </ScrollView>
+    </ContentPage>
+
+</TabbedPage>

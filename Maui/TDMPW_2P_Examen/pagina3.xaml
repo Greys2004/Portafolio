@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TDMPW_2P_Examen.pagina3"
+            Title="pagina3">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Frame
+                Grid.Row="2" 
+                Grid.Column="0"
+                Grid.RowSpan="2"
+                CornerRadius="20"
+                Padding="0"
+                HasShadow="False"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Margin="10,10,10,10"
+                >
+                <Image
+                    Source="https://tb-static.uber.com/prod/image-proc/processed_images/99d94af3a2cc3e7584a470d8186626d9/5954bcb006b10dbfd0bc160f6370faf3.jpeg"
+                    Aspect="AspectFill"
+                    x:Name="ComboImage"
+                />
+            </Frame>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                
+                <Label 
+                    Text="COMBO FAMILY"
+                    FontSize="30"
+                    TextColor="#26226e"
+                    VerticalOptions="Center" 
+                    FontFamily="Happy"
+                    Margin="15,10,0,0"
+                    Grid.Column="0"
+                    x:Name="ComboTitle"
+                />
+                <Label 
+                    x:Name="ComboPrecio"
+                    Text="$290"
+                    FontSize="30"
+                    TextColor="#26226e"
+                    VerticalOptions="Center" 
+                    FontFamily="Happy"
+                    Margin="0,10,15,0"
+                    Grid.Column="1"
+                />
+            </Grid>
+
+        <Label 
+            Text="Disfruta de nuestro Combo Familiar Deluxe, que incluye 2 palomitas grandes, perfectas para compartir en tu película. Acompáñalo con 4 refrescos de 500 ml para mantenerte hidratado y 2 nachos crujientes cubiertos de queso. Además, deleita tu paladar con 2 jugosos hotdogs. Ideal para cualquier ocasión, este combo es la combinación perfecta de sabores y diversión. ¡No te lo pierdas!"
+            FontSize="15"
+            TextColor="#726aab"
+            VerticalOptions="Center" 
+            Margin="10,10,10,0"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+        />
+
+        <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                
+                <Label 
+                    Text="Cantidad"
+                    FontSize="15"
+                    TextColor="#26226e"
+                    VerticalOptions="Center" 
+                    Margin="10,10,0,0"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                />
+                
+                <Label x:Name="CantidadLabel"
+                    Text="1"
+                    FontSize="15"
+                    TextColor="#26226e"
+                    VerticalOptions="Center"
+                    Margin="10,10,0,0"
+                    Grid.Column="1"
+                    FontAttributes="Bold"
+                />
+                <Stepper 
+                    x:Name="CantidadStepper"
+                    Minimum="1"
+                    Maximum="20"
+                    Increment="1"
+                    Value="0"
+                    HorizontalOptions="Center"
+                    Margin="10,10,10,0"
+                    BackgroundColor="#8b84bf"
+                    Grid.Column="2"
+                    ValueChanged="OnStepperValueChanged"
+                />
+            </Grid>
+
+            <Button
+                Text="| Combo Family                                                                               ➵"
+                HorizontalOptions="StartAndExpand"
+                Margin="5,20,5,5"
+                CornerRadius="20"
+                BorderWidth="2"
+                BackgroundColor="#9a92d1"
+                TextColor="White"
+                FontFamily="Happy"
+                FontSize="20"
+                Clicked="OnComboFamilyClicked"
+            />
+            <Button
+                Text="| Combo Jochos                                                                              ➵"
+                HorizontalOptions="StartAndExpand"
+                Margin="5,20,5,5"
+                CornerRadius="20"
+                BorderWidth="2"
+                BackgroundColor="#9a92d1"
+                TextColor="White"
+                FontFamily="Happy"
+                FontSize="20"
+                Clicked="OnComboJochosClicked"
+            />
+            <Button
+                Text="| Combo Nachos                                                                              ➵"
+                HorizontalOptions="StartAndExpand"
+                Margin="5,20,5,5"
+                CornerRadius="20"
+                BorderWidth="2"
+                BackgroundColor="#9a92d1"
+                TextColor="White"
+                FontFamily="Happy"
+                FontSize="20"
+                Clicked="OnComboNachosClicked"
+            />
+
+            <Label 
+                x:Name="TotalLabel"
+                Text="Total: $0"
+                FontSize="20"
+                TextColor="#9a92d1"
+                VerticalOptions="Center" 
+                Margin="10,20,10,0"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+            />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
