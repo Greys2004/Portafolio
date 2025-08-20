@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block title %}Editar Producto{% endblock %}
+
+{% block content %}
+<style>
+    .edit-wrapper {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .edit-form {
+        max-width: 650px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 40px 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .edit-form h2 {
+        text-align: center;
+        color: #0d6efd;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .form-label {
+        font-weight: 500;
+    }
+
+    .btn-back {
+        border: 1px solid #6c757d;
+        color: #6c757d;
+        background-color: #fff;
+        transition: 0.2s;
+    }
+
+    .btn-back:hover {
+        background-color: #e9ecef;
+        border-color: #6c757d;
+    }
+
+    .img-preview {
+        height: 100px;
+        object-fit: contain;
+        border: 1px solid #dee2e6;
+        background-color: #f1f1f1;
+        border-radius: 6px;
+    }
+</style>
+
+<div class="edit-wrapper">
+    <form method="post" enctype="multipart/form-data" class="edit-form">
+        {% csrf_token %}
+
+        <h2>Editar producto: {{ producto.name }}</h2>
+
+        <div class="mb-4">
+            <label class="form-label">Nombre</label>
+            <input type="text" name="name" class="form-control form-control-lg" value="{{ producto.name }}" required>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label">Descripción</label>
+            <textarea name="description" class="form-control form-control-lg" rows="4" required>{{ producto.description }}</textarea>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label">Categoría</label>
+            <select name="id_categoria" class="form-select form-select-lg" required>
+                {% for categoria in categorias %}
+                    <option value="{{ categoria.id }}" {% if categoria.id == producto.id_categoria %}selected{% endif %}>
+                        {{ categoria.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label">Precio</label>
+            <input type="number" name="price" step="0.01" class="form-control form-control-lg" value="{{ producto.price }}" required>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label">Imagen actual</label><br>
+            {% if producto.image %}
+                <img src="{{ producto.image }}" alt="{{ producto.name }}" class="img-preview mb-2">
+            {% else %}
+                <p class="text-muted fst-italic">No hay imagen cargada.</p>
+            {% endif %}
+            <input type="url" name="image" class="form-control form-control-lg mt-2" placeholder="https://...">
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <a href="{% url 'admin_listar_productos' %}" class="btn btn-back px-4">
+                ← Regresar
+            </a>
+            <button type="submit" class="btn btn-primary px-4 fw-semibold">
+                Actualizar producto
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
