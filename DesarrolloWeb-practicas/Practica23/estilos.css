@@ -1,0 +1,22 @@
+body{
+    background-color: rgba(195, 131, 223, 0.452);
+}
+
+.btn-1{
+    background-color: purple;
+    color: white;
+}
+
+.btn-1:hover {
+    background-color:rgb(173, 14, 128);
+    color: white;
+}
+
+h1 {
+    margin-top: -10px; /* Puedes ajustar este valor según lo necesites */
+}
+
+.custom-collapse {
+    background-color: rgba(195, 131, 223, 0.452);
+    padding: 20px; /* Ajusta el relleno si es necesario */
+}

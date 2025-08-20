@@ -1,0 +1,45 @@
+body {
+    animation : colores 1s infinite;
+}
+
+@keyframes colores{
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: blue;
+    }
+}
+
+.cuadroBlanco {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    animation: mover 2s infinite;
+    transform: rotate(45deg);
+}
+
+@keyframes mover {
+    from  {
+        top: 0px;
+    }
+
+    to {
+        top: 500px;
+    }
+}
+
+#cuadroBlanco2 {
+    left: 500px;
+    top: 200px;
+}

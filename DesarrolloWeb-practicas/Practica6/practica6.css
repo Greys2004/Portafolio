@@ -1,0 +1,55 @@
+body{
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 18%, rgba(9,121,108,1) 77%, rgba(0,190,183,1) 100%);
+  }
+
+  h1{
+    text-align: center;
+    margin-top: 50px;
+   /*margin-bottom: 50px; --Eliminar el espacio en blanco */
+   /*paddng es al redeor del texto */
+   /*margin es el espacio entre el texto y el borde */
+   /*border es el borde */
+  }
+  #menu{
+    display: flex;
+    flex: wrap;
+    background-color: rgba(222, 225, 228, 0.705);
+
+    
+  }
+  
+
+  .opcion {
+    background-color: #efefef;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+    margin: 10px;
+    cursor:  pointer;
+    transition: 0.5s ;
+    font-size: 14px;
+
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+
+
+}
+
+  .opcion:hover{
+
+    background-color: rgb(122, 146, 146);
+    box-shadow: 10px 17px 27px -7px rgba(0,0,0,0.7);
+    font-size: 20px;
+    
+    -webkit-box-shadow: 10px 17px 27px -7px rgba(0,0,0,0.7);
+    -moz-box-shadow: 10px 17px 27px -7px rgba(0,0,0,0.7);
+    
+
+  }

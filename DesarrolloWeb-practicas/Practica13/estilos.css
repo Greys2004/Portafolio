@@ -1,0 +1,17 @@
+.row.no-gutters [class^="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+img {
+    margin-bottom: 0;
+}
+
+.custom-bg-color-1 {
+    background-color: #ce78df;
+}
+
+.custom-bg-color-2{
+    background-color: #f3a5db;
+}
+

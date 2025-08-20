@@ -1,0 +1,82 @@
+Var--Ya no se recomienda
+let-- tiene ventaja que no deja repetir variables y tiene scope
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h1>Practica 13</h1>
+    <p id="nombreCompleto">Este es un parrafo</p>
+
+    <script>
+        /*
+        let miVariable=10; //Number, Integer
+        let numero=15;
+        let texto = "Hola mundo" //String
+        console.log(miVariable,numero,texto);
+        console.log(texto);
+        console.log("Resultado en consola: ",miVariable);
+        */
+
+        let edad=25;
+        console.log(edad);
+
+        function muestraEdad(miEdad){
+            let edad = miEdad * 10;
+            return edad;
+        } //Scope (los corchetes)
+
+        console.log(muestraEdad(edad));
+        console.log("Edad: ", edad);
+
+
+
+        const PI= 3.1416 //Constante, Number, Float
+        function areaCirculo(radio){
+            return PI * radio * radio;
+        }
+
+        let area = areaCirculo(5);
+        console.log("El area del circulo es: " + area);
+
+
+        function saludar(nombre){
+            return "Hola " + nombre;
+        }
+
+        let nuevoNombre = "Maria"
+        console.log(saludar("Greys"));
+        console.log(saludar(nuevoNombre));
+        //camelCase - nuevoNombre
+        //PascalCase - NuevoNombre
+        //Snake_Case - nuevo_nombre
+        //kebab-case - nuevo-nombre -No permitido en JS
+
+        let estado = true;
+        let otroEstado = false;
+        let arreglo = [1,2,3,4,5]; //Array
+        let arreglo2 = ["Python" , "Java" , "JS"]; //Array
+        let arreglo3 = [1, "Python" ,  true]; //Array
+        let arregloBooleanos = [true, false, true, false, true];
+
+        console.log(estado);
+        console.log (arreglo[2]);
+        console.log (arreglo[5]);
+
+
+        let nulo = null;
+        console.log("Reusltado de nulo: " + nulo);
+
+        let nombre = "Tony";
+        let apellido = "Stark"
+        let nombreCompleto = nombre + " " + apellido;
+
+        let nombreEnPantalla = document.getElementById("nombreCompleto");
+        nombreEnPantalla.innerHTML = nombreCompleto;
+    </script>
+</body>
+</html>
